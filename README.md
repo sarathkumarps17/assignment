@@ -17,17 +17,18 @@ In the project directory, follw the steps:
 ---
 
 3. The client app is located in client folder in this folder you can run:
-   install dependencies
+
+install dependencies
 
 ### `npm i`
 
 ---
 
-5. If API defailt port is changed add .env file and add REACT_APP_API_URL = 'http://localhost:8080'
+4. If API defailt port is changed add .env file and add REACT_APP_API_URL = 'http://localhost:8080'
 
 ---
 
-4. start the client app
+5. start the client app
 
 ### `npm start`
 
