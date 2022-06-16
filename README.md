@@ -24,7 +24,7 @@ install dependencies
 
 ---
 
-4. If API defailt port is changed add .env file and add REACT_APP_API_URL = 'http://localhost:8080'
+4. If API default port is changed add .env file and add REACT_APP_API_URL = 'http://localhost:8080'
 
 ---
 
