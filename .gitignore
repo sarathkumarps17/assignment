@@ -1,0 +1,29 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/movie-stream/node_modules
+/server/node_modules
+/movie-stream/.pnp
+/server/.pnp
+/movie-stream/.pnp.js
+
+# testing
+/movie-stream/coverage
+
+# production
+/movie-stream/build
+
+# misc
+.DS_Store
+/movie-stream/.env.local
+/movie-stream/.env.development.local
+/movie-stream/.env.test.local
+/movie-stream/.env.production.local
+
+/server/.env.local
+/server/.env.development.local
+/server/.env.test.local
+/server/.env.production.local
+
+pnpm-debug.log*
+npm-debug.log*
