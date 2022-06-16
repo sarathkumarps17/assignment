@@ -40,6 +40,29 @@ app.get("/", (req, res) => {
     });
   });
 });
+app.get("/search", (req, res) => {
+  const moviesCount = 54;
+  let text = req.query.text;
+  const pageCount = Math.ceil(moviesCount / 20);
+
+  // I am just implimenting  data fetching from json files stored in server //
+  //  db can be used implimant pagination to improve performace and privacy of data //
+
+  fs.readFile(`./db/allMovies.json`, "utf8", (err, data) => {
+    if (err) return res.status(500).json({ err });
+    let pageData = JSON.parse(data);
+    let { title, content_items } = pageData.page;
+    let result = content_items.content.filter((item) =>
+      item.name.toLowerCase().includes(text.toLowerCase())
+    );
+    res.status(200).json({
+      title,
+      page: 1,
+      pageCount: pageCount,
+      movies: result,
+    });
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`API server is up on port ${PORT}`);
